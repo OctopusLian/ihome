@@ -1,0 +1,35 @@
+syntax = "proto3";
+
+package go.micro.srv.register;
+
+service Register {
+	rpc SmsCode(Request) returns (Response) {};
+	rpc Register(RegRequest)returns(RegResponse){};
+	rpc Login(RegRequest)returns(RegResponse){};
+}
+
+message RegRequest{
+	string mobile = 1;
+	string password = 2;
+	string sms_code = 3;
+}
+
+//添加session,注册之后直接是登录状态
+message RegResponse{
+	string errno = 1;
+	string errmsg = 2;
+	string name = 3;
+}
+
+
+message Request {
+	string mobile = 1;
+	string text = 2;
+	string uuid = 3;
+}
+
+message Response {
+	string errno = 1;
+	string errmsg = 2;
+}
+
