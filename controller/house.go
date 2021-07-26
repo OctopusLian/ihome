@@ -4,15 +4,17 @@ import (
 	"context"
 	"encoding/json"
 	"fmt"
-	getImg "ihome/proto/getImg/proto/getImg"
-	houseMicro "ihome/proto/house/proto/house"
-	orderMicro "ihome/proto/order/proto/userOrder"
-	register "ihome/proto/register/proto/register"
-	user "ihome/proto/user/proto/user"
-	"ihomeb/utils"
 	"image/png"
 	"net/http"
 	"path"
+
+	getImg "github.com/OctopusLian/ihome/proto/getImg/proto/getImg"
+
+	houseMicro "github.com/OctopusLian/ihome/proto/house/proto/house"
+	orderMicro "github.com/OctopusLian/ihome/proto/order/proto/userOrder"
+	register "github.com/OctopusLian/ihome/proto/register/proto/register"
+	user "github.com/OctopusLian/ihome/proto/user/proto/user"
+	"github.com/OctopusLian/ihome/utils"
 
 	getArea "github.com/OctopusLian/ihome/proto/getArea/proto/getArea"
 

@@ -2,8 +2,9 @@ package model
 
 import (
 	"fmt"
-	"ihome/conf"
 	"time"
+
+	"github.com/OctopusLian/ihome/conf"
 
 	"github.com/gomodule/redigo/redis"
 	"github.com/jinzhu/gorm"
