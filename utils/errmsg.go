@@ -1,3 +1,10 @@
+/*
+ * @Description:
+ * @Author: neozhang
+ * @Date: 2021-10-30 12:53:51
+ * @LastEditors: neozhang
+ * @LastEditTime: 2022-04-10 21:26:13
+ */
 package utils
 
 const (
@@ -50,7 +57,6 @@ var recodeText = map[string]string{
 
 
 //函数  根据key来获取value
-
 func RecodeText(code string) string {
 	str, ok := recodeText[code]
 	if ok {

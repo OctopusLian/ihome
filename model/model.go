@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/OctopusLian/ihome/conf"
+	"ihome/conf"
 
 	"github.com/gomodule/redigo/redis"
 	"github.com/jinzhu/gorm"

@@ -1,13 +1,15 @@
 package main
 
 import (
-	"github.com/micro/go-micro/util/log"
-	"github.com/micro/go-micro"
-	"ihomebj5q/service/getImg/handler"
+	"ihome/service/getImg/handler"
 
-	getImg "ihomebj5q/service/getImg/proto/getImg"
+	"github.com/micro/go-micro"
+	"github.com/micro/go-micro/util/log"
+
+	"ihome/service/getImg/model"
+	getImg "ihome/service/getImg/proto/getImg"
+
 	"github.com/micro/go-micro/registry/consul"
-	"ihomebj5q/service/getImg/model"
 )
 
 func main() {
@@ -31,8 +33,6 @@ func main() {
 
 	// Register Handler
 	getImg.RegisterGetImgHandler(service.Server(), new(handler.GetImg))
-
-
 
 	// Run service
 	if err := service.Run(); err != nil {

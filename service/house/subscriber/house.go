@@ -2,9 +2,10 @@ package subscriber
 
 import (
 	"context"
+
 	"github.com/micro/go-micro/util/log"
 
-	house "ihomebj5q/service/house/proto/house"
+	house "ihome/service/house/proto/house"
 )
 
 type House struct{}

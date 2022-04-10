@@ -2,10 +2,11 @@ package handler
 
 import (
 	"context"
-	house "ihomebj5q/service/house/proto/house"
-	"ihomebj5q/service/house/model"
-	"ihomebj5q/utils"
+	"ihome/service/house/model"
+	house "ihome/service/house/proto/house"
+	"ihome/utils"
 	"strconv"
+
 	"github.com/weilaihui/fdfs_client"
 )
 

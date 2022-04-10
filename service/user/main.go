@@ -1,13 +1,15 @@
 package main
 
 import (
-	"github.com/micro/go-micro/util/log"
-	"github.com/micro/go-micro"
-	"ihomebj5q/service/user/handler"
+	"ihome/service/user/handler"
 
-	user "ihomebj5q/service/user/proto/user"
+	"github.com/micro/go-micro"
+	"github.com/micro/go-micro/util/log"
+
+	"ihome/service/user/model"
+	user "ihome/service/user/proto/user"
+
 	"github.com/micro/go-micro/registry/consul"
-	"ihomebj5q/service/user/model"
 )
 
 func main() {
@@ -28,7 +30,6 @@ func main() {
 
 	// Register Handler
 	user.RegisterUserHandler(service.Server(), new(handler.User))
-
 
 	// Run service
 	if err := service.Run(); err != nil {

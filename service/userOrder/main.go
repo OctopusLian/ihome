@@ -1,13 +1,15 @@
 package main
 
 import (
-	"github.com/micro/go-micro/util/log"
-	"github.com/micro/go-micro"
-	"ihomebj5q/service/userOrder/handler"
+	"ihome/service/userOrder/handler"
 
-	userOrder "ihomebj5q/service/userOrder/proto/userOrder"
+	"github.com/micro/go-micro"
+	"github.com/micro/go-micro/util/log"
+
+	"ihome/service/userOrder/model"
+	userOrder "ihome/service/userOrder/proto/userOrder"
+
 	"github.com/micro/go-micro/registry/consul"
-	"ihomebj5q/service/userOrder/model"
 )
 
 func main() {

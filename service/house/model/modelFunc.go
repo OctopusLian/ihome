@@ -1,8 +1,8 @@
 package model
 
 import (
-	house "ihomebj5q/service/house/proto/house"
 	"fmt"
+	house "ihome/service/house/proto/house"
 	"strconv"
 	"time"
 )

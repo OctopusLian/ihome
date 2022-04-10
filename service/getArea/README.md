@@ -5,7 +5,7 @@ This is the GetArea service
 Generated with
 
 ```
-micro new ihomebj5q/service/getArea --namespace=go.micro --type=srv
+micro new ihome/service/getArea --namespace=go.micro --type=srv
 ```
 
 ## Getting Started

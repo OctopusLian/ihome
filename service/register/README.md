@@ -5,7 +5,7 @@ This is the Register service
 Generated with
 
 ```
-micro new ihomebj5q/service/register --namespace=go.micro --type=srv
+micro new ihome/service/register --namespace=go.micro --type=srv
 ```
 
 ## Getting Started

@@ -1,12 +1,14 @@
 package main
 
 import (
-	"github.com/micro/go-micro/util/log"
-	"github.com/micro/go-micro"
-	"ihomebj5q/service/getArea/handler"
+	"ihome/service/getArea/handler"
 
-	getArea "ihomebj5q/service/getArea/proto/getArea"
-	"ihomebj5q/service/getArea/model"
+	"github.com/micro/go-micro"
+	"github.com/micro/go-micro/util/log"
+
+	"ihome/service/getArea/model"
+	getArea "ihome/service/getArea/proto/getArea"
+
 	"github.com/micro/go-micro/registry/consul"
 )
 
@@ -28,7 +30,6 @@ func main() {
 
 	// Register Handler
 	getArea.RegisterGetAreaHandler(service.Server(), new(handler.GetArea))
-
 
 	// Run service
 	if err := service.Run(); err != nil {

@@ -1,10 +1,18 @@
+/*
+ * @Description:
+ * @Author: neozhang
+ * @Date: 2021-10-30 12:53:51
+ * @LastEditors: neozhang
+ * @LastEditTime: 2022-04-10 21:24:58
+ */
 package subscriber
 
 import (
 	"context"
+
 	"github.com/micro/go-micro/util/log"
 
-	getImg "ihomebj5q/service/getImg/proto/getImg"
+	getImg "ihome/service/getImg/proto/getImg"
 )
 
 type GetImg struct{}

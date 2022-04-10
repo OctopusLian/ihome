@@ -5,7 +5,7 @@ This is the UserOrder service
 Generated with
 
 ```
-micro new ihomebj5q/service/userOrder --namespace=go.micro --type=srv
+micro new ihome/service/userOrder --namespace=go.micro --type=srv
 ```
 
 ## Getting Started

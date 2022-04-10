@@ -5,7 +5,7 @@ This is the GetImg service
 Generated with
 
 ```
-micro new ihomebj5q/service/getImg --namespace=go.micro --type=srv
+micro new ihome/service/getImg --namespace=go.micro --type=srv
 ```
 
 ## Getting Started

@@ -2,9 +2,10 @@ package subscriber
 
 import (
 	"context"
+
 	"github.com/micro/go-micro/util/log"
 
-	register "ihomebj5q/service/register/proto/register"
+	register "ihome/service/register/proto/register"
 )
 
 type Register struct{}

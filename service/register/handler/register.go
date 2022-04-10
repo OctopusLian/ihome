@@ -3,17 +3,17 @@ package handler
 import (
 	"context"
 
-
-	register "ihomebj5q/service/register/proto/register"
-	"ihomebj5q/service/register/model"
-	"ihomebj5q/service/register/utils"
+	"crypto/sha256"
 	"errors"
-	"github.com/aliyun/alibaba-cloud-sdk-go/sdk"
-	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests"
+	"fmt"
+	"ihome/service/register/model"
+	register "ihome/service/register/proto/register"
+	"ihome/service/register/utils"
 	"math/rand"
 	"time"
-	"fmt"
-	"crypto/sha256"
+
+	"github.com/aliyun/alibaba-cloud-sdk-go/sdk"
+	"github.com/aliyun/alibaba-cloud-sdk-go/sdk/requests"
 )
 
 type Register struct{}

@@ -1,12 +1,13 @@
 package model
 
 import (
+	"fmt"
+	"ihome/conf"
 	"time"
+
+	"github.com/gomodule/redigo/redis"
 	"github.com/jinzhu/gorm"
 	_ "github.com/jinzhu/gorm/dialects/mysql"
-	"ihomebj5q/conf"
-	"fmt"
-	"github.com/gomodule/redigo/redis"
 )
 
 /* 用户 table_name = user */

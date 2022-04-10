@@ -2,9 +2,10 @@ package subscriber
 
 import (
 	"context"
+
 	"github.com/micro/go-micro/util/log"
 
-	getArea "ihomebj5q/service/getArea/proto/getArea"
+	getArea "ihome/service/getArea/proto/getArea"
 )
 
 type GetArea struct{}

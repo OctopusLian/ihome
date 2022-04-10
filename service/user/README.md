@@ -5,7 +5,7 @@ This is the User service
 Generated with
 
 ```
-micro new ihomebj5q/service/user --namespace=go.micro --type=srv
+micro new ihome/service/user --namespace=go.micro --type=srv
 ```
 
 ## Getting Started
