@@ -3,16 +3,16 @@
  * @Author: neozhang
  * @Date: 2021-10-30 12:53:51
  * @LastEditors: neozhang
- * @LastEditTime: 2022-04-10 21:26:13
+ * @LastEditTime: 2022-05-14 16:23:07
  */
 package utils
 
 const (
-	RECODE_OK         = "0"
-	RECODE_DBERR      = "4001"
-	RECODE_NODATA     = "4002"
-	RECODE_DATAEXIST  = "4003"
-	RECODE_DATAERR    = "4004"
+	RECODE_OK        = "0"
+	RECODE_DBERR     = "4001"
+	RECODE_NODATA    = "4002"
+	RECODE_DATAEXIST = "4003"
+	RECODE_DATAERR   = "4004"
 
 	RECODE_SESSIONERR = "4101"
 	RECODE_LOGINERR   = "4102"
@@ -24,12 +24,12 @@ const (
 	RECODE_SMSERR     = "4108"
 	RECODE_MOBILEERR  = "4109"
 
-	RECODE_REQERR     = "4201"
-	RECODE_IPERR      = "4202"
-	RECODE_THIRDERR   = "4301"
-	RECODE_IOERR      = "4302"
-	RECODE_SERVERERR  = "4500"
-	RECODE_UNKNOWERR  = "4501"
+	RECODE_REQERR    = "4201"
+	RECODE_IPERR     = "4202"
+	RECODE_THIRDERR  = "4301"
+	RECODE_IOERR     = "4302"
+	RECODE_SERVERERR = "4500"
+	RECODE_UNKNOWERR = "4501"
 )
 
 var recodeText = map[string]string{
@@ -54,7 +54,6 @@ var recodeText = map[string]string{
 	RECODE_SMSERR:     "短信失败",
 	RECODE_MOBILEERR:  "手机号错误",
 }
-
 
 //函数  根据key来获取value
 func RecodeText(code string) string {
