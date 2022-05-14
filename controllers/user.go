@@ -3,7 +3,7 @@
  * @Author: neozhang
  * @Date: 2022-05-14 23:08:59
  * @LastEditors: neozhang
- * @LastEditTime: 2022-05-14 23:39:01
+ * @LastEditTime: 2022-05-15 00:26:59
  */
 package controllers
 
@@ -15,9 +15,9 @@ import (
 
 	"ihome/models"
 
-	"github.com/beego/beego"
 	"github.com/beego/beego/logs"
 	"github.com/beego/beego/orm"
+	beego "github.com/beego/beego/v2/server/web"
 )
 
 type UserController struct {
@@ -36,6 +36,7 @@ func (this *UserController) Post() {
 	// fmt.Println(params)
 	rep := `/^1(3[0-9]|4[01456879]|5[0-35-9]|6[2567]|7[0-8]|8[0-9]|9[0-35-9])\d{8}$/`
 	ok, _ := regexp.Match(rep, []byte(params["mobile"].(string)))
+	ok = true
 	if !ok {
 		resp["errno"] = 4001
 		resp["errmsg"] = "请输入正确的手机号"

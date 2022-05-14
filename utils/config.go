@@ -3,16 +3,16 @@
  * @Author: neozhang
  * @Date: 2022-05-14 16:24:08
  * @LastEditors: neozhang
- * @LastEditTime: 2022-05-14 16:38:30
+ * @LastEditTime: 2022-05-15 00:04:25
  */
 package utils
 
 import (
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/config"
 )
 
 var (
+	G_image_addr   string
 	G_server_name  string //项目名称
 	G_server_addr  string //服务器ip地址
 	G_server_port  string
@@ -27,13 +27,24 @@ var (
 )
 
 func InitConfig() {
-	appconf, err := config.NewConfig("ini", "./conf/app.conf")
-	if err != nil {
-		beego.Debug(err)
-		return
+	//从配置文件读取配置信息
+	//env := os.Getenv("ENV_CLUSTER")
+	env := "beta"
+	ConfPath := ""
+	if env == "online" {
+		ConfPath = "./conf/online.conf"
+	} else if env == "beta" {
+		ConfPath = "./conf/app.conf"
+	} else {
+		ConfPath = "./conf/dev.conf"
 	}
-	G_server_name = appconf.String("appname")
-	G_server_addr = appconf.String("httpaddr")
+	appconf, _ := config.NewConfig("ini", ConfPath)
+	// if err != nil {
+	// 	beego.Debug(err)
+	// 	return
+	// }
+	G_image_addr = appconf.String("imageaddr")
+	//G_server_addr = appconf.String("httpaddr")
 	G_server_port = appconf.String("httpport")
 	G_redis_addr = appconf.String("redisaddr")
 	G_redis_port = appconf.String("redisport")
@@ -41,8 +52,8 @@ func InitConfig() {
 	G_mysql_addr = appconf.String("mysqladdr")
 	G_mysql_port = appconf.String("mysqlport")
 	G_mysql_dbname = appconf.String("mysqldbname")
-	G_fastdfs_addr = appconf.String("fastdfsaddr")
-	G_fastdfs_port = appconf.String("fastdfsport")
+
+	return
 }
 
 func init() {

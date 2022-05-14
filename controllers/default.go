@@ -3,11 +3,13 @@
  * @Author: neozhang
  * @Date: 2022-05-14 23:11:14
  * @LastEditors: neozhang
- * @LastEditTime: 2022-05-14 23:11:18
+ * @LastEditTime: 2022-05-14 23:54:42
  */
 package controllers
 
-import "github.com/beego/beego"
+import (
+	beego "github.com/beego/beego/v2/server/web"
+)
 
 type MainController struct {
 	beego.Controller

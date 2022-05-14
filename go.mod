@@ -4,7 +4,6 @@ go 1.17
 
 require (
 	github.com/astaxie/beego v1.12.3
-	github.com/beego/admin v0.0.0-20210305083807-6b74f2e7468f
 	github.com/beego/beego v1.12.8
 	github.com/beego/beego/v2 v2.0.2
 	github.com/go-sql-driver/mysql v1.6.0
@@ -17,8 +16,6 @@ require (
 	github.com/golang/protobuf v1.5.2 // indirect
 	github.com/hashicorp/golang-lru v0.5.4 // indirect
 	github.com/kr/text v0.2.0 // indirect
-	github.com/lib/pq v1.10.2 // indirect
-	github.com/mattn/go-sqlite3 v2.0.3+incompatible // indirect
 	github.com/matttproud/golang_protobuf_extensions v1.0.1 // indirect
 	github.com/mitchellh/mapstructure v1.4.1 // indirect
 	github.com/pkg/errors v0.9.1 // indirect

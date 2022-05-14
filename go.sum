@@ -26,8 +26,6 @@ github.com/astaxie/beego v1.12.3/go.mod h1:p3qIm0Ryx7zeBHLljmd7omloyca1s4yu1a8kM
 github.com/aws/aws-lambda-go v1.13.3/go.mod h1:4UKl9IzQMoD+QF79YdCuzCwp8VbmG4VAQwij/eHl5CU=
 github.com/aws/aws-sdk-go v1.27.0/go.mod h1:KmX6BPdI08NWTb3/sm4ZGu5ShLoqVDhKgpiN924inxo=
 github.com/aws/aws-sdk-go-v2 v0.18.0/go.mod h1:JWVYvqSMppoMJC0x5wdwiImzgXTI9FuZwxzkQq9wy+g=
-github.com/beego/admin v0.0.0-20210305083807-6b74f2e7468f h1:3o6n0RdQgKC1XIyJBLBJZXqauDVI6Zr5BPsRCUboHIE=
-github.com/beego/admin v0.0.0-20210305083807-6b74f2e7468f/go.mod h1:2iUijo2NfTFwe8pWqsJKVWcdiC6ynopQD1LPHKJ7P/k=
 github.com/beego/beego v1.12.8 h1:0lfe+5ed+hOuE/f5t6fvt9DOy0mXctzCTZH4BkSXGsY=
 github.com/beego/beego v1.12.8/go.mod h1:QURFL1HldOcCZAxnc1cZ7wrplsYR5dKPHFjmk6WkLAs=
 github.com/beego/beego/v2 v2.0.2 h1:Mx2MWMHJN1oFBHewHWyIhR25tXB9IPceIK8X7OuMdZM=

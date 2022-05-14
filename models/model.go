@@ -4,8 +4,8 @@ import (
 	"ihome/utils"
 	"time"
 
-	"github.com/astaxie/beego"
 	"github.com/beego/beego/orm"
+	//beego "github.com/beego/beego/v2/server/web"
 	_ "github.com/go-sql-driver/mysql"
 )
 
@@ -105,16 +105,16 @@ func (this *House) To_one_house_desc() interface{} {
 	comments := []interface{}{}
 	orders := []OrderHouse{}
 	o := orm.NewOrm()
-	order_num, err := o.QueryTable("order_house").Filter(
+	order_num, _ := o.QueryTable("order_house").Filter(
 		"house_id",
 		this.Id,
 	).Filter(
 		"status",
 		ORDER_STATUS_COMPLETE,
 	).Count()
-	if err != nil {
-		beego.Error("select orders comments error,err = ", err, "house id = ", this.Id)
-	}
+	// if err != nil {
+	// 	log.Error("select orders comments error,err = ", err, "house id = ", this.Id)
+	// }
 	for i := 0; i < int(order_num); i++ {
 		o.LoadRelated(&orders[i], "User")
 		var username string
