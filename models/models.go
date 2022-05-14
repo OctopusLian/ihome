@@ -171,13 +171,49 @@ type OrderHouse struct {
 	Id          int       `json:"order_id"`
 	User        *User     `orm:"rel(fk)" json:"user"`     //下单的用户编号   与用户表进行关联
 	House       *House    `orm:"rel(fk)" json:"house_id"` //预定的房间编号   与房屋信息进行关联
-	Begin_date  time.Time `orm:"type(datetime)"`           //预定的起始时间
-	End_date    time.Time `orm:"type(datetime)"`           //预定的结束时间
+	Begin_date  time.Time `orm:"type(datetime)"`          //预定的起始时间
+	End_date    time.Time `orm:"type(datetime)"`          //预定的结束时间
 	Days        int       //预定总天数
 	House_price int       //房屋的单价
 	Amount      int       //订单总金额
 	Status      string    `orm:"default:(WAIT_ACCEPT)"` //订单状态
 	Comment     string    `orm:"size(512)"`             //订单评论
 	Credit      bool      //表示个人征信情况 true表示良好
-	Ctime       time.Time `orm:"auto_now;type(datetime)" json:"ctime"`  //每次更新此表，都会更新这个字段
+	Ctime       time.Time `orm:"auto_now;type(datetime)" json:"ctime"` //每次更新此表，都会更新这个字段
+}
+
+//处理订单信息
+func (this *OrderHouse) To_order_info() interface{} {
+	order_info := map[string]interface{}{
+		"order_id":   this.Id,
+		"title":      this.House.Title,
+		"img_url":    utils.AddDomain2Url(this.House.Index_image_url),
+		"start_date": this.Begin_date.Format("2006-01-02 15:04:05"),
+		"end_date":   this.End_date.Format("2006-01-02 15:04:05"),
+		"ctime":      this.Ctime.Format("2006-01-02 15:04:05"),
+		"days":       this.Days,
+		"amount":     this.Amount,
+		"status":     this.Status,
+		"comment":    this.Comment,
+		"credit":     this.Credit,
+	}
+	return order_info
+}
+
+func init() {
+	orm.RegisterDriver("mysql", orm.DRMySQL)
+	orm.RegisterDataBase("default", "mysql", "root:mysql123@tcp("+utils.G_mysql_addr+":"+utils.G_mysql_port+")/ihome?charset=utf8", 30)
+	orm.RegisterModel(
+		new(User),
+		new(House),
+		new(Area),
+		new(Facility),
+		new(HouseImage),
+		new(OrderHouse),
+	)
+	orm.RunSyncdb(
+		"default", //别名
+		false,     //是否强制替换模块，如果表变更就将false换成true之后再换回来表
+		true,      //如果没有则同步或创建
+	)
 }
