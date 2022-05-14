@@ -1,4 +1,4 @@
-package model
+package models
 
 import (
 	"ihome/utils"
@@ -48,7 +48,7 @@ type House struct {
 
 var HOME_PAGE_MAX_HOUSES int = 5 //首页最高展示的房屋数量
 
-var HOUSE_LIST_PAGE_CAPACICTY int = 2 //房屋列表页面每页显示条目数
+var HOUSE_LIST_PAGE_CAPACITY int = 2 //房屋列表页面每页显示条目数
 
 func (this *House) To_house_info() interface{} {
 	house_info := map[string]interface{}{
@@ -151,9 +151,9 @@ type Facility struct {
 
 /* 房屋图片 table_name = "house_image"*/
 type HouseImage struct {
-	Id      int    `json:"house_image_id"`         //图片id
-	Url     string `orm:"size(256)" json:"url"`    //图片url     存放我们房屋的图片
-	HouseId uint   `orm:"rel(fk)" json:"house_id"` //图片所属房屋编号
+	Id    int    `json:"house_image_id"`         //图片id
+	Url   string `orm:"size(256)" json:"url"`    //图片url     存放我们房屋的图片
+	House *House `orm:"rel(fk)" json:"house_id"` //图片所属房屋编号
 }
 
 const (
