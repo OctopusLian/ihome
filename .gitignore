@@ -1,5 +1,6 @@
 .idea/
 .vscode/
+ihome
 
 # !/static/upload/*.keep
 /static/upload/house/*

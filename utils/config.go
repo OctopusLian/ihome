@@ -3,15 +3,18 @@
  * @Author: neozhang
  * @Date: 2022-05-14 16:24:08
  * @LastEditors: neozhang
- * @LastEditTime: 2022-05-15 00:04:25
+ * @LastEditTime: 2022-05-15 13:57:06
  */
 package utils
 
 import (
+	"fmt"
+
 	"github.com/astaxie/beego/config"
 )
 
 var (
+	G_version      string
 	G_image_addr   string
 	G_server_name  string //项目名称
 	G_server_addr  string //服务器ip地址
@@ -43,8 +46,9 @@ func InitConfig() {
 	// 	beego.Debug(err)
 	// 	return
 	// }
+	G_version = appconf.String("version")
 	G_image_addr = appconf.String("imageaddr")
-	//G_server_addr = appconf.String("httpaddr")
+	G_server_addr = appconf.String("httpaddr")
 	G_server_port = appconf.String("httpport")
 	G_redis_addr = appconf.String("redisaddr")
 	G_redis_port = appconf.String("redisport")
@@ -58,4 +62,6 @@ func InitConfig() {
 
 func init() {
 	InitConfig()
+	//打印版本号
+	fmt.Println("IHOME_VERSION_IS:", G_version)
 }
